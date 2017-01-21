@@ -81,7 +81,7 @@
                                             <outlet property="poster" destination="3sW-sF-Et7" id="F4y-tr-SBu"/>
                                             <outlet property="typeLabel" destination="OTr-bg-a53" id="TxU-hm-aMR"/>
                                             <outlet property="yearLabel" destination="gyH-3w-NBn" id="DI6-oq-chz"/>
-                                            <segue destination="ggv-dR-5Au" kind="show" id="4Oh-W3-9VC"/>
+                                            <segue destination="ggv-dR-5Au" kind="show" identifier="" id="4Oh-W3-9VC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -256,7 +256,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Rate the movie" id="H2S-7b-gyU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Sg9-0h-BGB"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Sg9-0h-BGB">
+                            <connections>
+                                <action selector="cancelWithSend:" destination="cRd-9k-8i3" id="2an-eK-8ir"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Idv-MA-i7P">
                             <connections>
                                 <action selector="addReviewWithSender:" destination="cRd-9k-8i3" id="OtQ-M9-Jzq"/>
@@ -268,9 +272,11 @@
                         <outlet property="rating" destination="kss-Mj-RHW" id="1UX-SS-yHS"/>
                         <outlet property="type" destination="6i1-TP-HCV" id="HRG-6Y-bV5"/>
                         <outlet property="year" destination="Cqm-tK-cdv" id="7pN-i8-xjL"/>
+                        <segue destination="HT5-ar-lPI" kind="unwind" identifier="unwindToChooseMovie" unwindAction="unwindToChooseMovieTabWithSegue:" id="Rgt-dQ-DIx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LlM-5b-TdH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="HT5-ar-lPI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="4642" y="1357"/>
         </scene>

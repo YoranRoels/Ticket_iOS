@@ -13,12 +13,15 @@ class GiveRatingViewController: UITableViewController {
     var ratingDouble = 0.0
     
     //var reviewModel: ReviewModel = ReviewModel()
+    @IBAction func cancel(send: UIBarButtonItem) {
+        self.performSegue(withIdentifier: "unwindToChooseMovie", sender: self)
+    }
     
     @IBAction func addReview(sender: UIBarButtonItem) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let reviewModel = appDelegate.reviewModel
         reviewModel.reviews.append(Review(mediaTitle: movie.type, year: movie.year, type: movie.type, rating: ratingDouble))
-        //unwind(for: <#T##UIStoryboardSegue#>, towardsViewController: <#T##UIViewController#>)
+        self.performSegue(withIdentifier: "unwindToChooseMovie", sender: self)
     }
     @IBOutlet weak var mediaTitle: UILabel!
     @IBOutlet weak var type: UILabel!

@@ -38,7 +38,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewMovieCell", for: indexPath as IndexPath) as! ReviewMovieCell
-        cell.mediaTitle?.text = reviews[indexPath.row].mediaTitle
+        /*cell.mediaTitle?.text = reviews[indexPath.row].mediaTitle
         cell.type?.text = reviews[indexPath.row].type
         cell.year?.text = reviews[indexPath.row].year
         let rating = reviews[indexPath.row].rating
@@ -57,9 +57,8 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.rating?.text = "⭐️⭐️⭐️⭐️⭐️" + "(\(rating))"
         default:
             cell.rating?.text = "Rating not found"
-        }
+        } */
         return cell
-
     }
 }
 

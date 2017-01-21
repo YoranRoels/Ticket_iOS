@@ -161,5 +161,7 @@ class ChooseMovieViewController: UIViewController, UITableViewDataSource, UITabl
             }
         }
     }
+    
+    @IBAction func unwindToChooseMovieTab(segue: UIStoryboardSegue) {}
 }
 
