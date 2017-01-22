@@ -12,11 +12,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
     
     @IBOutlet weak var tableView: UITableView!
     
-    private var currentTask: URLSessionTask?
-    
     var movies:[Movie] = []
-    
-    //var reviewModel: ReviewModel = ReviewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +20,7 @@ class ExploreViewController: UIViewController, UITableViewDataSource, UITableVie
         tableView.delegate = self
         tableView.dataSource = self
         
-        movies = [Movie(title: "X-Men", year: "2003", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg", imdbID: "tt0120903", type: "movie"),Movie(title: "Breaking Bad", year: "2010-2013", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg", imdbID: "ABC124", type: "series"),Movie(title:"Inception", year: "2010", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg", imdbID: "ABC125", type: "movie")]
+        movies = [Movie(title: "X-Men", year: "2003", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTg5OTMxNzk4Nl5BMl5BanBnXkFtZTcwOTk1MjAwNQ@@._V1_SX300.jpg", imdbID: "tt0120903", type: "movie"),Movie(title: "Breaking Bad", year: "2008-2013", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ0ODYzODc0OV5BMl5BanBnXkFtZTgwMDk3OTcyMDE@._V1_SX300.jpg", imdbID: "tt0903747", type: "series"),Movie(title:"Inception", year: "2010", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg", imdbID: "tt1375666", type: "movie"), Movie(title:"Interstellar", year: "2014", poster: "https://images-na.ssl-images-amazon.com/images/M/MV5BMjIxNTU4MzY4MF5BMl5BanBnXkFtZTgwMzM4ODI3MjE@._V1_SX300.jpg", imdbID: "tt0816692", type: "movie")]
     
         self.tableView.reloadData()
     }

@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4D15FFC41E09862900BE334C /* ChooseMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D15FFC31E09862900BE334C /* ChooseMovieViewController.swift */; };
 		4D1E36861E340CEC005E9E2B /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E36851E340CEC005E9E2B /* ColorExtension.swift */; };
+		4D1E36881E3433B4005E9E2B /* cinema.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E36871E3433B4005E9E2B /* cinema.png */; };
+		4D1E368A1E3434DA005E9E2B /* CinemaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E36891E3434DA005E9E2B /* CinemaViewController.swift */; };
+		4D1E368C1E343F88005E9E2B /* trailers.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D1E368B1E343F88005E9E2B /* trailers.png */; };
+		4D1E36911E344389005E9E2B /* PinLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E36901E344389005E9E2B /* PinLocation.swift */; };
+		4D1E36931E3447E3005E9E2B /* TrailersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1E36921E3447E3005E9E2B /* TrailersViewController.swift */; };
 		4D5A301E1E0D76710040719A /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5A301D1E0D76710040719A /* Search.swift */; };
 		4D83CCC01E0D50F6007C5FE5 /* PreviewMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D83CCBF1E0D50F6007C5FE5 /* PreviewMovieCell.swift */; };
 		4D94E9B81E3292CA002854FC /* GiveRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D94E9B71E3292CA002854FC /* GiveRatingViewController.swift */; };
@@ -35,6 +40,11 @@
 		14D4D6999C5B494C283FFC5F /* Pods-MyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyApp/Pods-MyApp.debug.xcconfig"; sourceTree = "<group>"; };
 		4D15FFC31E09862900BE334C /* ChooseMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseMovieViewController.swift; sourceTree = "<group>"; };
 		4D1E36851E340CEC005E9E2B /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		4D1E36871E3433B4005E9E2B /* cinema.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = cinema.png; path = "../../../PICTURES-MYAPP/cinema.png"; sourceTree = "<group>"; };
+		4D1E36891E3434DA005E9E2B /* CinemaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CinemaViewController.swift; sourceTree = "<group>"; };
+		4D1E368B1E343F88005E9E2B /* trailers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trailers.png; path = "../../../PICTURES-MYAPP/trailers.png"; sourceTree = "<group>"; };
+		4D1E36901E344389005E9E2B /* PinLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinLocation.swift; sourceTree = "<group>"; };
+		4D1E36921E3447E3005E9E2B /* TrailersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrailersViewController.swift; sourceTree = "<group>"; };
 		4D5A301D1E0D76710040719A /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		4D83CCBF1E0D50F6007C5FE5 /* PreviewMovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewMovieCell.swift; sourceTree = "<group>"; };
 		4D94E9B71E3292CA002854FC /* GiveRatingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GiveRatingViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +95,8 @@
 		4D94E9C81E32D160002854FC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				4D1E368B1E343F88005E9E2B /* trailers.png */,
+				4D1E36871E3433B4005E9E2B /* cinema.png */,
 				4D94E9CD1E32F76D002854FC /* noImage.png */,
 				4D94E9C91E32D288002854FC /* ticket.png */,
 				4D94E9C31E32D141002854FC /* search.png */,
@@ -136,6 +148,8 @@
 				4D94E9B71E3292CA002854FC /* GiveRatingViewController.swift */,
 				4D94E9CF1E33838D002854FC /* ExploreViewController.swift */,
 				4DC01B281E33AF5900EF75B8 /* ReviewsViewController.swift */,
+				4D1E36891E3434DA005E9E2B /* CinemaViewController.swift */,
+				4D1E36921E3447E3005E9E2B /* TrailersViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -155,6 +169,7 @@
 				4D5A301D1E0D76710040719A /* Search.swift */,
 				4D94E9CB1E32DADB002854FC /* Review.swift */,
 				4D1E36851E340CEC005E9E2B /* ColorExtension.swift */,
+				4D1E36901E344389005E9E2B /* PinLocation.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -240,8 +255,10 @@
 			files = (
 				4D94E9C61E32D141002854FC /* search.png in Resources */,
 				4D94E9CA1E32D288002854FC /* ticket.png in Resources */,
+				4D1E36881E3433B4005E9E2B /* cinema.png in Resources */,
 				4D94E9C51E32D141002854FC /* movies.png in Resources */,
 				4DC38E081DF6DB2900B48139 /* LaunchScreen.storyboard in Resources */,
+				4D1E368C1E343F88005E9E2B /* trailers.png in Resources */,
 				4D94E9CE1E32F76D002854FC /* noImage.png in Resources */,
 				4DC38E051DF6DB2900B48139 /* Assets.xcassets in Resources */,
 				4DC38E031DF6DB2900B48139 /* Main.storyboard in Resources */,
@@ -308,12 +325,15 @@
 				4D94E9B81E3292CA002854FC /* GiveRatingViewController.swift in Sources */,
 				4DC38E001DF6DB2900B48139 /* ViewController.swift in Sources */,
 				4D15FFC41E09862900BE334C /* ChooseMovieViewController.swift in Sources */,
+				4D1E368A1E3434DA005E9E2B /* CinemaViewController.swift in Sources */,
 				4D1E36861E340CEC005E9E2B /* ColorExtension.swift in Sources */,
 				4D83CCC01E0D50F6007C5FE5 /* PreviewMovieCell.swift in Sources */,
 				4DC01B271E33A9E100EF75B8 /* ReviewMovieCell.swift in Sources */,
 				4D94E9BA1E32C8F8002854FC /* ReviewModel.swift in Sources */,
+				4D1E36931E3447E3005E9E2B /* TrailersViewController.swift in Sources */,
 				4D94E9CC1E32DADB002854FC /* Review.swift in Sources */,
 				4DC38DFE1DF6DB2900B48139 /* AppDelegate.swift in Sources */,
+				4D1E36911E344389005E9E2B /* PinLocation.swift in Sources */,
 				4D94E9D21E3383D8002854FC /* ExploreMovieCell.swift in Sources */,
 				4D94E9D01E33838D002854FC /* ExploreViewController.swift in Sources */,
 				4DC38E181DF70BEC00B48139 /* Movie.swift in Sources */,

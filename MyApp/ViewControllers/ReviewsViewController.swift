@@ -27,9 +27,14 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
         /* Setup delegates */
         tableView.delegate = self
         
-        reviews = [Review(mediaTitle: "X-Men", year: "2003", type: "movie", rating: 4.0), Review(mediaTitle: "Breaking Bad", year: "2010-2013", type: "series", rating: 4.6), Review(mediaTitle:"Inception", year: "2010", type: "movie", rating: 3.8)]
+        reviews = [Review(mediaTitle: "X-Men", year: "2003", type: "movie", rating: 4.0), Review(mediaTitle: "Breaking Bad", year: "2010-2013", type: "series", rating: 4.6),
+            Review(mediaTitle:"Inception", year: "2010", type: "movie", rating: 3.8)]
         
         self.tableView.reloadData()
+    }
+    
+    private func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,7 +43,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reviewMovieCell", for: indexPath as IndexPath) as! ReviewMovieCell
-        /*cell.mediaTitle?.text = reviews[indexPath.row].mediaTitle
+        cell.mediaTitle?.text = reviews[indexPath.row].mediaTitle
         cell.type?.text = reviews[indexPath.row].type
         cell.year?.text = reviews[indexPath.row].year
         let rating = reviews[indexPath.row].rating
@@ -57,7 +62,7 @@ class ReviewsViewController: UIViewController, UITableViewDataSource, UITableVie
             cell.rating?.text = "⭐️⭐️⭐️⭐️⭐️" + "(\(rating))"
         default:
             cell.rating?.text = "Rating not found"
-        } */
+        }
         return cell
     }
 }

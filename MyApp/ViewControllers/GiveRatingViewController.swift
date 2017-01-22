@@ -29,7 +29,7 @@ class GiveRatingViewController: UITableViewController {
     @IBAction func sliderValueChanged(sender: UISlider) {
         let currentValue = Double(round(sender.value*1000)/1000)
         
-        rating.text  = String(format: "%.1f", (currentValue / 95) * 100)
+        rating.text  = String(format: "%.1f", (currentValue / 100) * 100)
         ratingDouble = Double(rating.text!)!
     }
     @IBOutlet weak var rating: UILabel!
