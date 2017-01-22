@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import os.log
 
 class GiveRatingViewController: UITableViewController {
     
     var ratingDouble = 0.0
+    
+    var reviews: [Review] = []
     
     //var reviewModel: ReviewModel = ReviewModel()
     @IBAction func cancel(send: UIBarButtonItem) {
@@ -18,9 +21,11 @@ class GiveRatingViewController: UITableViewController {
     }
     
     @IBAction func addReview(sender: UIBarButtonItem) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let reviewModel = appDelegate.reviewModel
-        reviewModel.reviews.append(Review(mediaTitle: movie.type, year: movie.year, type: movie.type, rating: ratingDouble))
+        if loadReviews() != nil {
+        reviews = loadReviews()!
+        }
+        reviews.append(Review(poster: movie.poster, mediaTitle: movie.title, year: movie.year, type: movie.type, rating: ratingDouble))
+        saveReviews()
         self.performSegue(withIdentifier: "unwindToChooseMovie", sender: self)
     }
     @IBOutlet weak var mediaTitle: UILabel!
@@ -37,10 +42,22 @@ class GiveRatingViewController: UITableViewController {
     var movie: Movie!
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         mediaTitle.text = movie.title
         type.text = movie.type
         year.text = movie.year
     }
     
+    private func loadReviews() -> [Review]?  {
+        return NSKeyedUnarchiver.unarchiveObject(withFile: Review.ArchiveURL.path) as? [Review]
+    }
     
+    private func saveReviews() {
+        let isSuccessfulSave = NSKeyedArchiver.archiveRootObject(reviews, toFile: Review.ArchiveURL.path)
+        if isSuccessfulSave {
+            os_log("Reviews saved locally.", log: OSLog.default, type: .debug)
+        } else {
+            os_log("Failed to save reviews locally!", log: OSLog.default, type: .error)
+        }
+    }
 }

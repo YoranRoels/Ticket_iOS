@@ -13,12 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    var reviewModel = ReviewModel()
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        //UserDefaults.standard.setValue(token, forKey: "user_auth_token")
-        //print("\(UserDefaults.standard.value(forKey: "user_auth_token")!)")
         return true
     }
 
